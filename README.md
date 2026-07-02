@@ -7,7 +7,9 @@ creative-coding framework — the full C++ API plus the guides, searchable offli
   functions, enums + values, constants, macros, type aliases) and the TrussC
   guides, as self-contained static HTML with a SQLite search index.
 - **Generated**, not hand-written: built from TrussC's canonical `reference-data.json`
-  by `docs/reference/emit-dash.js` in the TrussC repo.
+  by `docs/reference/emit-dash.js` on the `feat/zeal-document-generator` branch of the
+  [`icq4ever/TrussC`](https://github.com/icq4ever/TrussC/tree/feat/zeal-document-generator)
+  fork (this tooling is **not** in the official `TrussC-org/TrussC` repo yet).
 
 ---
 
@@ -33,11 +35,21 @@ guides, and use the per-page table of contents.
 
 ## Build & package
 
-The docset is produced in the **TrussC repo** (needs `clang` for the one AST
+The docset is produced from the **TrussC repo** (needs `clang` for the one AST
 step), then packaged here.
 
+> [!IMPORTANT]
+> The docset tooling (`generate.js` / `emit-dash.js`) lives only on the
+> `feat/zeal-document-generator` branch of the **[`icq4ever/TrussC`](https://github.com/icq4ever/TrussC/tree/feat/zeal-document-generator)**
+> fork — it is **not** part of the official `TrussC-org/TrussC` repo (or its `main`).
+> Clone that fork/branch first:
+>
+> ```bash
+> git clone -b feat/zeal-document-generator https://github.com/icq4ever/TrussC.git
+> ```
+
 ```bash
-# 1) in the TrussC repo — build the docset
+# 1) in the icq4ever/TrussC fork (feat/zeal-document-generator) — build the docset
 cd /path/to/TrussC/docs
 npm install
 cd reference
@@ -54,8 +66,8 @@ Then attach `TrussC.tgz` to a GitHub Release (or commit it), and update the
 install link above.
 
 Full build reference (clang setup incl. Windows, options, troubleshooting):
-[`docs/reference/zeal-docgen-guide.md`](https://github.com/TrussC-org/TrussC/blob/main/docs/reference/zeal-docgen-guide.md)
-in the TrussC repo.
+[`docs/reference/zeal-docgen-guide.md`](https://github.com/icq4ever/TrussC/blob/feat/zeal-document-generator/docs/reference/zeal-docgen-guide.md)
+on the `feat/zeal-document-generator` branch of the `icq4ever/TrussC` fork.
 
 ---
 
