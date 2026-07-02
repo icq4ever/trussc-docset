@@ -15,8 +15,9 @@ creative-coding framework — the full C++ API plus the guides, searchable offli
 
 ## Install
 
-Zeal has no "add local docset" dialog — drop the bundle into its docsets folder
-and restart.
+Zeal has no "add local docset" dialog — you **can't** feed it the `.tgz`
+directly. Extract the bundle to a `TrussC.docset` folder, drop that folder into
+the docsets folder below, and restart.
 
 | App / OS | Docsets folder |
 |----------|----------------|
@@ -26,7 +27,13 @@ and restart.
 
 1. Grab `TrussC.tgz` from the [Releases](../../releases) (or build it — see below).
 2. Extract it so you get a `TrussC.docset` folder.
+   - **Windows:** Explorer can't open `.tgz`. Use [Bandizip](https://www.bandisoft.com/bandizip/)
+     (or 7-Zip) — right-click → *Extract here*. Note it's a double layer
+     (`.tgz` → `.tar` → folder), so extract until you see `TrussC.docset`.
+   - **macOS/Linux:** double-click, or `tar -xzf TrussC.tgz`.
 3. Move `TrussC.docset` into the docsets folder above and restart Zeal/Dash.
+   Make sure it's `…\docsets\TrussC.docset\Contents\…` — not double-nested as
+   `…\docsets\TrussC.docset\TrussC.docset\…`.
 
 "TrussC" then appears in the sidebar. Search e.g. `Color::fromHSB`, browse the
 guides, and use the per-page table of contents.
