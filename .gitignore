@@ -1,0 +1,6 @@
+# the unpacked docset bundle (a build artifact staged here before packaging)
+TrussC.docset/
+
+# OS cruft
+.DS_Store
+Thumbs.db
